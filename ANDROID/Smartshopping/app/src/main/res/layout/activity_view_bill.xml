@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View_bill">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/NormalView"
+        android:padding="20dp"
+        >
+<!--    <TableRow-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
+
+<!--        <TextView-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginLeft="40dp"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:gravity="left"-->
+<!--            android:text="My Orders "-->
+<!--            android:textSize="20dp"-->
+<!--            android:textStyle="bold" />-->
+<!--    </TableRow>-->
+<!--        <View-->
+<!--            android:layout_width="370dp"-->
+<!--            android:layout_height="1dp"-->
+<!--            android:layout_weight="3"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:layout_marginBottom="0dp"-->
+<!--            android:background="#e2e2e2"-->
+<!--            />-->
+    <ListView
+        android:layout_marginTop="50dp"
+        android:id="@+id/My_order_lists"
+        android:layout_width="match_parent"
+        android:scrollbars="none"
+        android:layout_height="match_parent" />
+
+    </LinearLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/EmptyView"
+        android:visibility="gone"
+        >
+
+        <ImageView
+            android:id="@+id/Emptyimage"
+            android:layout_width="match_parent"
+            android:layout_height="600dp"
+            android:src="@drawable/previews_complaints"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+           />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="450dp"
+            android:gravity="center"
+            android:text="Oops...No order have been done yet. "
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <View
+        android:layout_width="370dp"
+        android:layout_height="1dp"
+        android:layout_weight="3"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="65dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="0dp"
+        android:background="#e2e2e2"
+        />
+    <View
+        android:layout_width="410dp"
+        android:layout_height="64dp"
+        android:layout_weight="3"
+        android:layout_alignParentTop="true"
+        android:background="@color/whiteTextColor"
+        />
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="My orders "
+        android:gravity="left"
+        android:layout_marginLeft="60dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginTop="25dp"
+
+        android:textAppearance="?android:attr/textAppearanceMedium"
+
+        />
+    <ImageView
+        android:id="@+id/backslash"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_back_arrow"
+        />
+</RelativeLayout>

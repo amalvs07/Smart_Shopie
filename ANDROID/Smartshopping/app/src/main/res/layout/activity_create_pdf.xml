@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whiteTextColor"
+    android:focusableInTouchMode="true"
+    tools:context=".Create_pdf">
+<!--    <ScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        >-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/ll_pdflayout"
+        android:padding="20dp">
+<!--        <Button-->
+<!--            android:id="@+id/btn_generate"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+
+<!--            android:layout_marginLeft="100dp"-->
+<!--            android:layout_marginRight="100dp"-->
+<!--            android:text="Generate PDF" />-->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_image"
+                android:layout_width="70dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/cart" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+
+                android:text="Smart Shopie"
+
+                android:textColor="@color/orange_700"
+                android:textSize="28dp"
+                android:textStyle="bold"
+
+                />
+
+
+        </TableRow>
+        <TableRow
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="90dp"
+                android:gravity="top|left"
+                android:layout_marginTop="35dp"
+
+
+                android:text=" NH 42 ,Edapilly , Eranakulam 683111"
+
+                android:textColor="@color/orange_700"
+                android:textSize="15dp"
+                android:textStyle="bold"
+
+                />
+        </TableRow>
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/address"
+            android:layout_marginTop="10dp"
+            android:layout_weight="3"
+            android:background="@color/black" />
+        <TableRow
+            android:id="@+id/table1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+
+                android:layout_marginTop="15dp"
+                android:text=" Date"
+
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:textStyle="bold"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/SalesDate"
+                android:layout_marginLeft="20dp"
+
+                android:layout_marginTop="15dp"
+                android:text=" 12/4/2021"
+
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:textStyle="bold"
+
+                />
+        </TableRow>
+        <TableRow
+            android:id="@+id/table2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/table1"
+
+            android:layout_marginLeft="10dp">
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/orange_400"
+
+                android:padding="10dp"
+                android:text=" Bill From:"
+
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:textStyle="bold"
+
+                />
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_storefront"
+                />
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:id="@+id/Store_Name"
+                android:textColor="@color/black"
+                android:text="StorenMAe"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:gravity="left|center"
+                />
+
+
+
+        </TableRow>
+        <TableRow
+            android:id="@+id/table3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/table2"
+            android:layout_marginBottom="10dp">
+
+               <ImageView
+                android:layout_width="30dp"
+                     android:layout_height="40dp"
+                   android:layout_marginLeft="10dp"
+                      android:src="@drawable/ic_baseline_person_24"
+                     />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+
+                android:layout_marginTop="15dp"
+                android:text="Amal VS"
+                android:id="@+id/Customer_Name"
+
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="40dp"
+                android:src="@drawable/ic_phone"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+
+                android:layout_marginTop="15dp"
+                android:text="9645806342"
+                android:id="@+id/Customer_phone"
+
+                android:textColor="@color/black"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/table4"
+            android:layout_width="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/table3"
+            android:background="@color/orange_400"
+
+
+            android:layout_marginLeft="10dp">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:padding="5dp"
+                android:text="Item"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:textStyle="bold"
+
+                />
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:text="Qty"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:textStyle="bold"
+
+                />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:text="Amount"
+
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:textStyle="bold"
+
+                />
+
+        </TableRow>
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/table4"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:scrollbars="none"
+            android:id="@+id/Product_list_items"
+            />
+        <View
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/Product_list_items"
+            android:layout_marginTop="10dp"
+            android:layout_weight="3"
+            android:background="@color/black" />
+
+        <TableRow
+            android:id="@+id/table5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line2"
+            android:layout_marginBottom="0dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+
+                android:layout_marginTop="5dp"
+                android:text=" SUB Total"
+
+                android:textColor="@color/black"
+                android:textSize="13dp"
+                android:textStyle="bold"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="65dp"
+                android:layout_marginRight="10dp"
+
+                android:layout_marginTop="5dp"
+                android:id="@+id/Total_amount"
+                android:text="999"
+
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/table6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/table5"
+            android:layout_marginBottom="0dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+
+                android:layout_marginTop="5dp"
+                android:text=" Other charges"
+
+                android:textColor="@color/green"
+                android:textSize="13dp"
+                android:textStyle="bold"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="10dp"
+
+                android:layout_marginTop="5dp"
+                android:text="FREE"
+
+                android:textColor="@color/green"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/table7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/table6"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+
+                android:layout_marginTop="5dp"
+                android:text=" Total Amount"
+
+                android:textColor="@color/black"
+                android:textSize="13dp"
+                android:textStyle="bold"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="10dp"
+
+                android:layout_marginTop="5dp"
+                android:text="999"
+                android:id="@+id/Grand_Total"
+
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/table8"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_below="@+id/table7"
+            >
+
+            <TextView
+                android:layout_width="389dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:text=" Make all checks payable to Smart Shopie "
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:textStyle="bold"
+
+
+                />
+
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/table9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/table8"
+            android:layout_marginBottom="20dp"
+            >
+
+            <TextView
+                android:layout_width="389dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text=" Thank you very much come back again"
+                android:textColor="@color/orange_500"
+                android:textSize="15dp"
+                android:textStyle="normal"
+
+
+                />
+
+
+        </TableRow>
+
+
+
+
+
+
+
+
+        <TextView
+            android:id="@+id/tv_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textSize="10dp" />
+    </RelativeLayout>
+<!--    </ScrollView>-->
+</RelativeLayout>

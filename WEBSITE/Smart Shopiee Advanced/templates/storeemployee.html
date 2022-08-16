@@ -1,0 +1,207 @@
+{% include 'storeheader.html' %}
+
+<div class="inner-banner">
+</div>
+<section class="w3l-breadcrumb">
+    <div class="container">
+        <ul class="breadcrumbs-custom-path">
+            <li><a href="#url">Home</a></li>
+            <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span> Manage Employees</li>
+        </ul>
+    </div>
+</section>
+  <!--/contact-->
+  <section class="w3l-contact-11 py-5">
+    <div class="contacts-main py-lg-5 py-md-4">
+      <div class="title-content text-center">
+        <h6 class="sub-titlehny">Stores</h6>
+        {% if data['upemployee'] %}
+        <h3 class="hny-title">Updation of Employees</h3>
+        {% else %}
+        <h3 class="hny-title">Registration of Employees</h3>
+         {% endif %}
+    </div>
+      <div class="form-41-mian section-gap mt-5">
+        <div class="container">
+          <div class="d-grid align-form-map">
+            <div class="form-inner-cont">
+              <form  method="post" class="signin-form" style="    padding-bottom: 30px !important;">
+              		{% if data['upemployee'] %}
+                <div class="form-input">
+                  <label for="w3lName">First Name*</label>
+                  <input type="text"  id="w3lName" name="first_name" placeholder="Enter Your First name" 
+                  value="{{data['upemployee'][0]['first_name_employee'] }}" />
+                </div>
+                 <div class="form-input">
+                  <label for="w3lName">Last Name*</label>
+                  <input type="text"  id="w3lName" name="last_name" placeholder="Enter Your Last name" 
+                  value="{{data['upemployee'][0]['last_name_employee'] }}" />
+                </div>
+
+               <div class="form-input">
+                   <label for="w3lSender">Gender *</label>
+               
+                </div>
+                {% if data['upemployee'][0]['gender'] == "Male" %}
+                  <div class="gender">
+                      <label>Male</label>
+                  <input type="radio" name="gender"  value="Male" checked /> <label>Female</label> <input type="radio" name="gender"   value="Female" />
+                   </div>
+                {% else %}
+                 <div class="gender">
+                      <label>Male</label>
+                  <input type="radio" name="gender"  value="Male"  /> <label>Female</label> <input type="radio" name="gender"   value="Female" checked />
+                   </div>
+                      {% endif %}
+                <div class="form-input">
+                  <label for="w3lSender">Phone No*</label>
+                  <input type="text"  id="w3lSender"  name="phone" placeholder="Enter the Phone  number" 
+                  value="{{ data['upemployee'][0]['phone'] }}" required="" />
+                </div>
+        
+
+                  <div class="form-input">
+                  <label for="w3lSender">Date Of Birth *</label>
+                  <input type="Date" name="dob"  placeholder="Enter the Date of Birth"  value="{{ data['upemployee'][0]['dob'] }}" required="" />
+                </div>
+
+                 <div class="form-input">
+                  <label for="w3lSender">Place *</label>
+                  <input type="text" name="place"  placeholder="Enter the Place" value="{{ data['upemployee'][0]['place'] }}"  required="" />
+                </div>
+
+                 <div class="form-submit text-right">
+                    <button type="submit"  name="submits"    class="btn btn-style btn-primary">Update Details</button>
+                  </div>
+{% else %}
+
+                <div class="form-input">
+                  <label for="w3lName">First Name*</label>
+                  <input type="text"  id="w3lName" name="first_name" placeholder="Enter Your First name"  />
+                </div>
+               <div class="form-input">
+                   <label for="w3lName">Last Name*</label>
+                  <input type="text"  id="w3lName" name="last_name" placeholder="Enter Your Last name"  />
+                </div>
+                 <div class="form-input">
+                   <label for="w3lName">Gender *</label>
+              
+                </div>
+                  <div class="gender">
+                      <label>Male</label>
+                  <input type="radio" name="gender"  value="Male" /> <label>Female</label> <input type="radio" name="gender"   value="Female" />
+                   </div>
+
+
+                   <div class="form-input">
+                  <label for="w3lSender">Date Of Birth *</label>
+                  <input type="Date" name="dob"  placeholder="Enter the Date of Birth" required="" />
+                </div>
+                <div class="form-input">
+                  <label for="w3lSender">Phone No*</label>
+                  <input type="text"  id="w3lSender"  name="phone" placeholder="Enter the Phone  number" required="" />
+                </div>
+                 <div class="form-input">
+                  <label for="w3lSender">Place *</label>
+                  <input type="text"  name="place"  placeholder="Enter the Place" required="" />
+                </div>
+                  <div class="form-input">
+                  <label for="w3lSender">E-mail *</label>
+                  <input type="text" name="email" placeholder="Enter the Email Address" required="" />
+                </div>
+
+                  <div class="form-input">
+                  <label for="w3lSender">Password *</label>
+                  <input type="password" name="password" placeholder="Enter the password" required="" />
+                </div>
+                 <div class="form-submit text-right">
+                    <button type="submit" name="submit" class="btn btn-style btn-primary">Submit</button>
+                  </div>
+
+
+
+             
+
+
+
+
+         
+                  {% endif %}
+              </form>
+            </div>
+            <div class="map" style="padding-bottom: 40px !important;">
+            	 <img src="/static/images/57276.jpg" style="width: 600px; height: 400px" alt="ooppssssssss">
+             <!--  <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001161.424489281!2d-78.01909140705047!3d42.72866436845163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sin!4v1570786994395!5m2!1sen!2sin"
+                frameborder="0" allowfullscreen=""></iframe> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+	<center>
+		          
+
+
+
+<table class="complaint" >
+  <thead >
+  	 <tr>
+		<th scope="col">Sl.No</th>
+		
+		<th scope="col">Employee Name</th>
+    <th scope="col">Gender</th>
+		<th scope="col">Date of Birth</th>
+    <th scope="col">Place</th> 
+     <th scope="col">Phone No.</th> 
+		<th scope="col">E-mail</th>
+		<th scope="col" colspan="2" style="text-align: center;">Action</th>
+	</tr>
+</thead>
+<tbody>
+    {% for row in data['employee'] %}
+  <tr>
+    <td scope="row" data-label="Sl.No">{{loop.index}}</td>
+    <td scope="row" data-label="Employee Name">{{row['first_name_employee']}} {{row['last_name_employee']}}</td>
+
+    <td scope="row" data-label="Gender">{{row['gender']}}</td>
+    <td scope="row" data-label="Date of Birth">{{row['dob']}}</td>
+    <td scope="row" data-label="Place">{{row['place']}}</td>
+    <td scope="row" data-label="Phone No.">{{row['phone']}}</td>
+    <td scope="row" data-label="E-mail">{{row['email']}}</td>
+  
+  
+    <td scope="row" data-label="Action"><a href="?action=update&id={{row['login_id']}}" id="updatestore">Update</a></td>
+    <td scope="row" data-label="Action"><a href="?action=delete&id={{row['login_id']}}" id="deletestore">Delete</a></td>
+  
+  </tr>
+  {% endfor %}
+</tbody>
+
+</table>
+
+</center>
+</div>
+</section>
+
+
+{% include 'footer.html' %}
+<style type="text/css">
+	#deletestore,
+	#updatestore{
+		padding: 10px;
+		color: black;
+		border-radius: 5px
+	}
+	#deletestore
+	{
+		background-color: crimson;
+	}
+	#updatestore{
+		    background-color: mediumseagreen;
+	}
+
+</style>

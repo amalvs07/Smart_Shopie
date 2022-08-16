@@ -1,0 +1,138 @@
+{% include 'stockdepartmentheader.html' %}
+
+  <div class="inner-banner">
+  </div>
+  <section class="w3l-breadcrumb">
+    <div class="container">
+      <ul class="breadcrumbs-custom-path">
+        <li><a href="#url">Home</a></li>
+        <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span> View Sales</li>
+      </ul>
+    </div>
+  </section>
+  <!--/contact-->
+  <section class="w3l-contact-11 py-5">
+    <div class="contacts-main py-lg-5 py-md-4">
+      <div class="title-content text-center">
+        <h6 class="sub-titlehny">sale</h6>
+        
+        <h3 class="hny-title">Sales Details</h3>
+   
+    </div>
+
+
+<table class="complaint">
+  <thead >
+     <tr>
+    <th scope="col">Sl.No</th>
+    <th scope="col" >Customer Name</th> 
+    <th scope="col">Store Name</th>
+    <th scope="col">Product Name</th>
+    <th scope="col">Amount</th> 
+    <th scope="col">Payment Mode</th>
+    <th scope="col">Sale Date</th>
+<!--     <th scope="col">Payment Date</th>  -->
+<!--     <th scope="col"  style="text-align: center;">Action</th> -->
+  </tr>
+</thead>
+<tbody>
+    {% for row in data['sales'] %}
+  <tr>
+    <td scope="row" data-label="Sl.No">{{loop.index}}</td>
+    <td scope="row" data-label="Customer Name">{{row['first_name']}}  {{row['last_name']}}</td>
+
+    <td scope="row" data-label="Store Name">{{row['store_name']}}</td>
+    <td scope="row" data-label="Product Name">{{row['product_name']}}</td>
+    <td scope="row" data-label="Amount">{{row['total_amount']}}</td>
+    <td scope="row" data-label="Payment Mode">{{row['payment_mode']}}</td>
+    <td scope="row" data-label="Sale Date">{{row['sales_date']}}</td>
+<!--     <td scope="row" data-label="Payment Date">{{row['payment_date']}}</td> -->
+<!--     <td scope="row" data-label="Action"><a href="?action=update&id={{row['payment_id']}}" id="updatestore">Confirm</a></td> -->
+
+  
+  </tr>
+  {% endfor %}
+</tbody>
+
+</table>
+</div>
+</section>
+<!--  <section class="w3l-contact-11 py-5">
+    <div class="contacts-main py-lg-5 py-md-4">
+      <div class="title-content text-center">
+        <h6 class="sub-titlehny">Order</h6>
+        
+        <h3 class="hny-title">Order status Details</h3>
+   
+    </div>
+<table class="users">
+  <thead >
+     <tr>
+    <th scope="col">Sl.No</th>
+    <th scope="col">Employee Name</th>
+    <th scope="col" >Customer Name</th> 
+    <th scope="col">Store Name</th>  
+    <th scope="col">Total Amount</th> 
+    <th scope="col">Date</th>
+   
+    <th scope="col">Description</th>
+
+    <th scope="col"  style="text-align: center;">Action</th>
+  </tr>
+</thead>
+<tbody>
+    {% for row in data['orderstatus'] %}
+  <tr>
+    <td scope="row" data-label="Sl.No">{{loop.index}}</td>
+    <td scope="row" data-label="Employee Name">{{row['first_name_employee']}} {{row['last_name_employee']}}</td>
+    <td scope="row" data-label="Customer Name">{{row['first_name']}} {{row['last_name']}}</td>
+    <td  scope="row" data-label="Store Name">{{row['store_name']}}</td>
+    <td scope="row" data-label="Amount">{{row['total_amount']}}</td>
+    <td scope="row" data-label="Stocks">{{row['date_time']}}</td>
+    <td scope="row" data-label="Description">{{row['update_description']}}</td>
+    
+  {% if row['update_description']=="Paid" %}
+
+    <td scope="row" data-label="Action"><a href="?action=update&id={{row['status_id']}}" id="updatestore">Update Status</a></td>
+    {% elif row['update_description']=="Pending" %}
+      <td scope="row" data-label="Action" id="deletestore">Noted Payed</td>
+      {% else %}
+          <td scope="row" data-label="Action">Status Updated</td>
+      {% endif %}
+  
+  </tr>
+  {% endfor %}
+</tbody>
+
+</table> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</section>
+<style type="text/css">
+    #deletestore,
+  #updatestore{
+    padding: 10px;
+    color: black;
+    border-radius: 5px
+  }
+  #deletestore
+  {
+    background-color: crimson;
+  }
+  #updatestore{
+        background-color: mediumseagreen;
+  }
+</style>
+{% include 'footer.html' %}

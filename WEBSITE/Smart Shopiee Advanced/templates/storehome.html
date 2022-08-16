@@ -1,0 +1,253 @@
+
+{% include 'storeheader.html' %}
+
+  <!-- main-slider -->
+  <section class="w3l-main-slider" id="home">
+    <div class="companies20-content">
+      <div class="owl-one owl-carousel owl-theme">
+        <div class="item">
+          <li>
+            <div class="slider-info banner-view bg bg2">
+              <div class="banner-info">
+                <div class="container">
+                  <div class="banner-info-bg">
+                    {% if data['storename'] %}
+                    <h6 style=" font-size: 3.55rem !important;">Welcome to Smart Shopie, </h6>
+                    <h5 style="  color: orangered !important;">{{data['storename'][0]['store_name'] }}</h5>
+                    {% endif %}
+                    <p class="mt-4 pr-lg-4">I like to think of sales as the ability to gracefully persuade, not manipulate, a person or persons into a win-win situation. </p>
+                    <a class="btn btn-style btn-primary mt-sm-5 mt-4 mr-2" href="#about"> About Us</a>
+                    <a class="btn btn-style btn-white mt-sm-5 mt-4" href="#products"> Products</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </div>
+        <div class="item">
+          <li>
+            <div class="slider-info  banner-view banner-top1 bg bg2">
+              <div class="banner-info">
+                <div class="container">
+                  <div class="banner-info-bg">
+                    <h5>Focus On Being Productive </h5>
+                    <p class="mt-4 pr-lg-4">By working faithfully eight hours a day, you may eventually get to be boss and work twelve hours a day. </p>
+                    <a class="btn btn-style btn-primary mt-sm-5 mt-4 mr-2" href="#about"> About Us</a>
+                    <a class="btn btn-style btn-white mt-sm-5 mt-4" href="#products"> Products</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </div>
+        <div class="item">
+          <li>
+            <div class="slider-info banner-view banner-top2 bg bg2">
+              <div class="banner-info">
+                <div class="container">
+                  <div class="banner-info-bg">
+                    <h5>Provide Effective Sale Solutions</h5>
+                    <p class="mt-4 pr-lg-4">Timing, perseverance, and ten years of trying will eventually make you look like an overnight success. </p>
+                    <a class="btn btn-style btn-primary mt-sm-5 mt-4 mr-2" href="#about"> About Us</a>
+                    <a class="btn btn-style btn-white mt-sm-5 mt-4" href="#products"> Products</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </div>
+        <div class="item">
+          <li>
+            <div class="slider-info banner-view banner-top3 bg bg2">
+              <div class="banner-info">
+                <div class="container">
+                  <div class="banner-info-bg">
+                    {% if data['storename'] %}
+                    <h6 style=" font-size: 3.55rem !important;">Welcome to Smart Shopie </h6>
+                    <h5 style="  color: orangered !important;">{{data['storename'][0]['store_name'] }}</h5>
+                    {% endif %}
+                    <p class="mt-4 pr-lg-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+                      quisquam, doloremque placeat aut numquam ipsam. </p>
+                    <a class="btn btn-style btn-primary mt-sm-5 mt-4 mr-2" href="#about"> About Us</a>
+                    <a class="btn btn-style btn-white mt-sm-5 mt-4" href="#products"> Products</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </div>
+      </div>
+      <div class="arrow-downhny">
+        <a href="#about" class="arrow-down text-center position-absolute">
+          <span class="arrow-down-icon">
+            <span class="fa fa-arrow-down"></span>
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- /main-slider -->
+  <!--/grids-->
+  <section class="w3l-grids-3 py-5" id="about">
+    <div class="container py-md-5 py-3">
+      <div class="row bottom-ab-grids align-items-center">
+
+        <div class="col-lg-6 bottom-ab-left">
+          <h6 class="sub-titlehny">About Our Company</h6>
+          <h3 class="hny-title">An inspired approach to quality residential and commercial products </h3>
+          <p class="my-3">Once again, we come to the Holiday Season, a deeply religious time that each of us observes, in his own way, by going to the mall of his choice.
+</p>
+        </div>
+        <div class="col-lg-6 bottom-ab-right mt-lg-0 mt-3 pl-lg-4">
+          <p>If you want to go to the mall, you have to take security. But it's always cool. The kids are amazing.
+</p>
+          <p class="mt-3"> The mall tour was right off of my second record, before it came out. It was very different. I did an acoustic performance every day in a different mall! One interesting thing I remember is playing 'My Happy Ending' a lot, and that song was so new that I remember getting emotional.
+</p>
+        </div>
+
+      </div>
+      <div class="row bottom_grids pt-md-3 text-left">
+        <div class="col-lg-4 col-md-6 mt-5">
+          <div class="grid-block">
+            <a href="#" class="d-block p-lg-4 p-3">
+              <span class="fa fa-cubes" aria-hidden="true"></span>
+              <h4 class="my-3">Product
+                Management & Represention</h4>
+              <p class="">Great products are engineered when product managers truly understand the desired outcomes by actively listening to people, not users.</p>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mt-5">
+          <div class="grid-block">
+            <a href="#" class="d-block p-lg-4 p-3">
+              <span class="fa fa-building-o" aria-hidden="true"></span>
+              <h4 class="my-3">Shopping Mall  & Shops</h4>
+              <p class="">When going gets tough the tough go shopping.Any day is a perfect day for shopping .Honestly shopping beats therpy,anytime It costs the same & you get a dressout of it .  </p>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mt-5">
+          <div class="grid-block">
+            <a href="#" class="d-block p-lg-4 p-3">
+              <span class="fa fa-podcast" aria-hidden="true"></span>
+              <h4 class="my-3">Owner's
+                Representation</h4>
+              <p class="">Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work. And the only way to do great work is to love what you do.</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--//grids-->
+  <!--/w3l-faq-block-->
+  <div class="w3l-cwp4-sec py-5">
+    <div class="container py-md-5 py-3">
+      <div class="cwp4-two row align-items-center">
+        <div class="cwp4-text col-lg-6">
+          <h6 class="sub-titlehny">Mall Reputation!</h6>
+          <h3 class="hny-title">Sweating While You Shop Counts As Exercise.</h3>
+          <p>A product is not quality because it is hard to make and costs a lot of money , as manufacturers typically belive .This is incompetence.Customers pay only for what is of use to them and gives them value. Nothing else constitutes quality .
+          </p>
+
+          <ul class="cont-4 mt-lg-5 mt-4">
+            <li><span class="fa fa-check-circle-o"></span> Quality Control System, 100% Satisfaction Guarantee</li>
+            <li><span class="fa fa-check-circle-o"></span> Best Products , Obeying Covid-19 Protocols </li>
+            <li><span class="fa fa-check-circle-o"></span> Quality Is Remembered Long After The Price Is Forgotten</li>
+
+          </ul>
+        </div>
+        <div class="cwp4-image col-lg-6 pl-lg-5 mt-lg-0 mt-5">
+          <img src="/static/images/35.jpg" class="img-fluid" alt="">
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!--//w3l-faq-block-->
+  <section class="w3l-portfolio-8 py-5" id="products">
+    <div class="portfolio-main py-md-5 py-3">
+      <div class="container">
+        <div class="header-section text-center mx-auto">
+          <h6 class="sub-titlehny">View Products</h6>
+          <h3 class="hny-title">Latest Products</h3>
+          <p class="my-3">Approach each customer with the idea of helping him or her to solve a problem or achieve a goal, not of selling a product or service.</p>
+          </div>
+        <div class="row galler-top mt-lg-5 mt-4">
+          <div class="col-md-4 protfolio-item hover14">
+            <a href="/static/images/31.jpg" data-lightbox="example-set" class="mb-4"
+              data-title="lorem ipsum dolor sit amet">
+              <figure>
+                <img src="/static/images/31.jpg" alt="product" class="img-fluid">
+              </figure>
+            </a>
+            <a href="/static/images/21.jpg" data-lightbox="example-set" class="mb-md-0 mb-4" data-title="lorem ipsum dolor sit amet">
+              <figure>
+                <img src="/static/images/21.jpg" alt="product" class="img-fluid">
+              </figure>
+            </a>
+          </div>
+          <div class="col-md-4 protfolio-item hover14">
+            <a href="/static/images/24.jpg" data-lightbox="example-set" class="mb-4"
+              data-title="lorem ipsum dolor sit amet">
+              <figure>
+                <img src="/static/images/24.jpg" alt="product" class="img-fluid">
+              </figure>
+            </a>
+            <a href="/static/images/23.jpg" data-lightbox="example-set" class="mb-md-0 mb-4" data-title="lorem ipsum dolor sit amet">
+              <figure>
+                <img src="/static/images/23.jpg" alt="product" class="img-fluid">
+              </figure>
+            </a>
+          </div>
+          <div class="col-md-4 protfolio-item hover14">
+            <a href="/static/images/32.jpg" data-lightbox="example-set" class="mb-4"
+              data-title="lorem ipsum dolor sit amet">
+              <figure>
+                <img src="/static/images/32.jpg" alt="product" class="img-fluid">
+              </figure>
+            </a>
+            <a href="/static/images/27.jpg" data-lightbox="example-set" data-title="lorem ipsum dolor sit amet">
+              <figure>
+                <img src="/static/images/27.jpg" alt="product" class="img-fluid">
+              </figure>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+    <!--//projects-->
+  <!-- stats -->
+<section class="w3l-stats py-lg-5 py-5" id="stats">
+  <div class="gallery-inner container py-md-5 py-3">
+      <div class="row stats-con">
+          <div class="col-lg-3 col-6 stats_info counter_grid">
+              <span class="fa fa-laptop"></span>
+              <p class="counter">1200</p>
+              <h4>Product Sales Completed in 2021</h4>
+          </div>
+          <div class="col-lg-3 col-6 stats_info counter_grid1">
+              <span class="fa fa-hospital-o"></span>
+              <p class="counter">120</p>
+              <h4>Qualified Shops  With Us</h4>
+          </div>
+          <div class="col-lg-3 col-6 stats_info counter_grid mt-lg-0 mt-5">
+              <span class="fa fa-trophy"></span>
+              <p class="counter">1012</p>
+              <h4>Satisfied Users We Served By Now</h4>
+          </div>
+          <div class="col-lg-3 col-6 stats_info counter_grid2 mt-lg-0 mt-5">
+              <span class="fa fa-smile-o"></span>
+              <p class="counter">30</p>
+              <h4>Years Of Experience In The Mall</h4>
+          </div>
+      </div>
+  </div>
+</section>
+
+ <div class="note">
+        Free Delivery Services| Stay Home Stay Safe <span class="fa fa-hospital-o"></span> </div>
+
+{% include 'footer.html' %}

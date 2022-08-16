@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whiteTextColor"
+    tools:context=".Purchase_limit">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:scrollbars="none"
+        android:paddingTop="20dp"
+
+        >
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        >
+<!--        <TableRow-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="match_parent">-->
+
+<!--            <TextView-->
+<!--                android:layout_width="376dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:gravity="left"-->
+<!--                android:layout_marginLeft="40dp"-->
+<!--                android:layout_marginBottom="20dp"-->
+<!--                android:text="Purchase Limit "-->
+<!--                android:textSize="20dp"-->
+<!--                android:textStyle="bold" />-->
+<!--        </TableRow>-->
+<!--            <View-->
+<!--                android:layout_width="370dp"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:layout_weight="3"-->
+<!--                android:layout_alignParentBottom="true"-->
+<!--                android:layout_marginBottom="0dp"-->
+<!--                android:background="#e2e2e2"-->
+<!--                />-->
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="20dp"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/limitssss" />
+        </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:layout_width="130dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="45dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/roundrectangle"
+
+            >
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Limit"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹"
+                android:textSize="22dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="10dp"
+                android:textStyle="bold"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/tv_limit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="22dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="30dp"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+        </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="130dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="45dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/roundrectangle"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Balance"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="₹"
+                    android:textSize="22dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/tv_balance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="22dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="30dp"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </RelativeLayout>
+
+
+            </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:gravity="center" >
+
+
+    <EditText
+        android:id="@+id/ed_limit"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="40dp"
+        android:inputType="numberDecimal"
+        android:text="0" />
+
+            <br.com.simplepass.loading_button_lib.customViews.CircularProgressButton
+                android:id="@+id/bt_add_money"
+                style="@style/loginButton"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:text="Add"
+                app:initialCornerAngle="27dp"
+                app:spinning_bar_color="#FFF"
+                app:spinning_bar_padding="6dp"
+                app:spinning_bar_width="4dp"
+
+                />
+        </TableRow>
+
+
+    </LinearLayout>
+    </ScrollView>
+    <View
+        android:layout_width="370dp"
+        android:layout_height="1dp"
+        android:layout_weight="3"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="65dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="0dp"
+        android:background="#e2e2e2"
+        />
+    <View
+        android:layout_width="410dp"
+        android:layout_height="64dp"
+        android:layout_weight="3"
+        android:layout_alignParentTop="true"
+        android:background="@color/whiteTextColor"
+        />
+    <TextView
+        android:id="@+id/textV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Purchase Limit "
+        android:gravity="left"
+        android:layout_marginLeft="60dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+
+        android:textAppearance="?android:attr/textAppearanceMedium"
+
+        />
+    <ImageView
+        android:id="@+id/backslash"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_back_arrow"
+        />
+</RelativeLayout>

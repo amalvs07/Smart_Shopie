@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Complaint"
+    android:layout_gravity="center"
+    android:background="@color/login_bk_color"
+    android:focusableInTouchMode="true"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:paddingTop="20dp"
+        android:scrollbars="none"
+        > <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        >
+
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:src="@drawable/newcomplaint" />
+        </TableRow>
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Write Short description"
+    android:layout_marginTop="20dp"
+    android:layout_marginLeft="20dp"
+    />
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+
+            >
+
+            <EditText
+                android:id="@+id/id_complaint"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top|left"
+                android:background="#f5f3f3"
+                android:paddingTop="30dp"
+                android:paddingLeft="20dp"
+                android:inputType="textMultiLine"
+                android:hint="Enter your concerns here..."
+                android:lines="5"
+                android:scrollHorizontally="false"
+                android:scrollbars="vertical"
+                />
+
+        </TableRow>
+
+        <br.com.simplepass.loading_button_lib.customViews.CircularProgressButton
+            android:id="@+id/compliant"
+            style="@style/loginButton"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:text="Rasie a Complaint"
+            android:textAllCaps="false"
+            app:initialCornerAngle="27dp"
+            app:spinning_bar_color="#FFF"
+            app:spinning_bar_padding="6dp"
+            app:spinning_bar_width="4dp"
+
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Previews Complaints"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            />
+        <ListView
+            android:id="@+id/Complaint_lists"
+            android:layout_width="match_parent"
+            android:layout_height="1000dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="50dp" />
+
+    </LinearLayout>
+
+
+    </ScrollView>
+    <View
+        android:layout_width="370dp"
+        android:layout_height="1dp"
+        android:layout_weight="3"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="65dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="0dp"
+        android:background="#e2e2e2"
+        />
+    <View
+        android:layout_width="410dp"
+        android:layout_height="64dp"
+        android:layout_weight="3"
+        android:layout_alignParentTop="true"
+        android:background="@color/whiteTextColor"
+        />
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Complaints "
+        android:gravity="left"
+        android:layout_marginLeft="60dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+
+        android:textAppearance="?android:attr/textAppearanceMedium"
+
+        />
+    <ImageView
+        android:id="@+id/backSlash"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/ic_back_arrow"
+        />
+</RelativeLayout>

@@ -1,0 +1,67 @@
+{% include 'adminheader.html' %}
+
+  <div class="inner-banner">
+  </div>
+  <section class="w3l-breadcrumb">
+    <div class="container">
+      <ul class="breadcrumbs-custom-path">
+        <li><a href="#url">Home</a></li>
+        <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span> View Users</li>
+      </ul>
+    </div>
+  </section>
+  <!--/contact-->
+  <section class="w3l-contact-11 py-5">
+    <div class="contacts-main py-lg-5 py-md-4">
+      <div class="title-content text-center">
+        <h6 class="sub-titlehny">Users</h6>
+        <h3 class="hny-title">Registered Customers </h3>
+    </div>
+<table class="rating">
+	
+
+
+
+  <thead >
+  	 <tr>
+		<th scope="col">Sl.No</th>
+		<th scope="col">Name</th>
+		<th scope="col">Phone</th>
+		<th scope="col"> E-mail</th>
+		<th scope="col">Latitude</th> 
+		<th scope="col">Longitude</th>
+		<th scope="col">House</th>	
+		<th scope="col">Place</th>
+		<th scope="col">Pincode</th>
+	</tr>
+</thead>
+	<tbody>
+		{% for row in data['users'] %}
+	
+			<tr>
+		<td scope="row" data-label="Sl.No">{{loop.index}}</td>
+		<td scope="row" data-label="Name">{{row['first_name']}} {{row['last_name']}}</td>
+		<td scope="row" data-label="Phone">{{row['phone']}}</td>
+		<td scope="row" data-label="E-mail">{{row['email']}}</td>
+		<td scope="row" data-label="Latitude">{{row['latitude']}}</td>
+		<td scope="row" data-label="Longitude">{{row['longitude']}}</td>
+		<td scope="row" data-label="House">{{row['house']}}</td>
+		<td scope="row" data-label="Place">{{row['place']}}</td>
+		<td scope="row" data-label="Pincode">{{row['pincode']}}</td>
+	
+	</tr>
+		
+
+	
+		{% endfor %}
+		</tbody>
+
+</table>
+
+</div> 
+
+
+
+
+</section>
+{% include 'footer.html' %}

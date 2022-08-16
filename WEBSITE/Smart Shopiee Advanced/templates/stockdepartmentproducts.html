@@ -1,0 +1,128 @@
+{% include 'stockdepartmentheader.html' %}
+
+  <div class="inner-banner">
+  </div>
+  <section class="w3l-breadcrumb">
+    <div class="container">
+      <ul class="breadcrumbs-custom-path">
+        <li><a href="#url">Home</a></li>
+        <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span> View Products</li>
+      </ul>
+    </div>
+  </section>
+  <!--/contact-->
+  <section class="w3l-contact-11 py-5">
+    <div class="contacts-main py-lg-5 py-md-4">
+      <div class="title-content text-center">
+        <h6 class="sub-titlehny">Product</h6>
+         {% if data['updateproduct'] %}
+        <h3 class="hny-title">Updation of Stocks  </h3>
+        {% else %}        
+        <h3 class="hny-title">Product Details</h3>
+        {% endif %}
+    </div>
+
+     <div class="form-41-mian section-gap mt-5">
+        <div class="container">
+          <div class="d-grid align-form-map">
+            <div class="form-inner-cont">
+              <form  method="post" class="signin-form" style="    padding-bottom: 30px !important;">
+       {% if data['updateproduct'] %}
+       <div class="form-input">
+                  <label for="w3lName">Product Name:{{ data['updateproduct'][0]['product_name'] }} &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;Store Name :{{data['updateproduct'][0]['store_name'] }}</label>
+                 
+                </div>
+
+                <div class="form-input">
+                  <label for="w3lName">Stock*</label>
+                  <input type="text"  id="w3lName" name="stock" placeholder="Enter Avaliable Quantity" 
+                  value="{{data['updateproduct'][0]['avaliable_quantity'] }}" />
+                </div>
+
+
+<!--                 <div class="form-input">
+                  <label for="w3lSender">Unit*</label>
+                  <input type="text"  id="w3lSender"  name="unit" placeholder="Enter the Unit of  Quantity" 
+                  value="{{ data['updateproduct'][0]['unit'] }}" required="" />
+                </div> -->
+                  <div class="form-submit text-right">
+                    <button type="submit"  name="updation"    class="btn btn-style btn-primary">Update Details</button>
+                  </div>
+                     {% endif %}
+                     </form>
+            </div>
+               </div>
+      </div>
+</div>
+
+
+
+
+<table >
+  <thead >
+     <tr>
+    <th scope="col">Sl.No</th>
+    <th scope="col">Store Name</th> 
+    <th scope="col">Product Name</th>
+    <th scope="col">Product Image</th>
+    <th scope="col">Amount</th> 
+    <th scope="col">Description</th>
+    <th scope="col">Stocks</th>
+<!--     <th scope="col">Stock Unit</th>  -->
+    <th scope="col"  style="text-align: center;">Action</th>
+  </tr>
+</thead>
+<tbody>
+    {% for row in data['product'] %}
+  <tr>
+    <td scope="row" data-label="Sl.No">{{loop.index}}</td>
+    <td scope="row" data-label="Store Name">{{row['store_name']}}</td>
+    <td  scope="row" data-label="Product Name">{{row['product_name']}}</td>
+    <td scope="row" data-label="Product Image"> <img src="../{{row['image']}}" alt="soorryy" style="width: 150px;  height: 120px;"></td>
+    <td scope="row" data-label="Amount">{{row['amount']}}</td>
+    <td scope="row" data-label="Description">{{row['description']}}</td>
+ {% if row['avaliable_quantity'] == '0' %}
+    <td scope="row" data-label="Stock">Out of Stock</td>
+    {% else %}
+      <td scope="row" data-label="Stock"> {{row['avaliable_quantity'] }}</td>
+      {% endif%}
+<!--     <td scope="row" data-label="Stock Unit">{{row['unit']}}</td> -->
+    <td scope="row" data-label="Action"><a href="?action=update&id={{row['stock_id']}}" id="updatestore">Update Stocks</a></td>
+
+  
+  </tr>
+  {% endfor %}
+</tbody>
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</section>
+<style type="text/css">
+    #deletestore,
+  #updatestore{
+    padding: 10px;
+    color: black;
+    border-radius: 5px
+  }
+  #deletestore
+  {
+    background-color: crimson;
+  }
+  #updatestore{
+        background-color: mediumseagreen;
+  }
+</style>
+{% include 'footer.html' %}

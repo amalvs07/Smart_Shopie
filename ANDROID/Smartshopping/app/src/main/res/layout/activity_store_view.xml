@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whiteTextColor"
+    tools:context=".Store_view">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:id="@+id/NormalView"
+
+
+        >
+
+
+<!--        <TableRow-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            >-->
+
+<!--            <TextView-->
+<!--                android:layout_width="100dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:layout_marginBottom="10dp"-->
+<!--                android:text="Stores "-->
+<!--                android:textSize="20dp"-->
+<!--                android:gravity="left"-->
+<!--                android:textStyle="bold" />-->
+<!--        </TableRow>-->
+<!--            <View-->
+<!--                android:layout_width="370dp"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:layout_weight="3"-->
+<!--                android:layout_alignParentBottom="true"-->
+<!--                android:layout_marginBottom="0dp"-->
+<!--                android:background="#e2e2e2"-->
+<!--                />-->
+            <ListView
+                android:id="@+id/store_lists"
+                android:layout_marginTop="45dp"
+                android:layout_marginBottom="46dp"
+                android:scrollbars="none"
+                android:layout_width="match_parent"
+                android:layout_height="800dp" />
+
+
+
+    </LinearLayout>
+    </ScrollView>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/EmptyView"
+        android:visibility="gone"
+        android:layout_marginTop="60dp"
+        >
+
+        <Button
+            android:id="@+id/imageView6"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="37dp"
+            android:text="Refresh"
+            android:paddingStart="20dp"
+            android:textColor="@color/themeColor"
+            android:background="@drawable/refresh_button"
+            android:drawableStart="@drawable/ic_refresh"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/Emptyimage" />
+
+<!--        <TableRow-->
+
+<!--            android:layout_width="141dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:layout_marginTop="40dp"-->
+<!--            android:layout_marginRight="95dp"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/imageView6"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/Emptyimage">-->
+
+
+<!--            <ImageView-->
+<!--                android:layout_width="30dp"-->
+<!--                android:layout_height="30dp"-->
+<!--                android:layout_marginLeft="5dp"-->
+<!--                android:layout_marginTop="2dp"-->
+<!--                android:src="@drawable/ic_refresh" />-->
+
+<!--            <TextView-->
+<!--                android:layout_width="100dp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:gravity="left"-->
+<!--                android:text="REFRESH"-->
+<!--                android:textColor="#f07d20"-->
+<!--                android:textSize="18dp"-->
+<!--                android:textStyle="bold" />-->
+<!--        </TableRow>-->
+
+        <ImageView
+            android:id="@+id/Emptyimage"
+            android:layout_width="match_parent"
+            android:layout_height="600dp"
+            android:src="@drawable/eroor_message"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="450dp"
+            android:gravity="center"
+            android:text="Oops...Something went wrong. "
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="370dp"
+        android:layout_height="1dp"
+        android:layout_weight="3"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="65dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="0dp"
+        android:background="#e2e2e2"
+        />
+    <View
+        android:layout_width="410dp"
+        android:layout_height="64dp"
+        android:layout_weight="3"
+        android:layout_alignParentTop="true"
+        android:background="@color/whiteTextColor"
+        />
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Stores "
+        android:gravity="left"
+        android:layout_marginLeft="30dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+
+        android:textAppearance="?android:attr/textAppearanceMedium"
+
+        />
+    <View
+        android:layout_width="410dp"
+        android:layout_height="1dp"
+        android:layout_weight="3"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="55dp"
+        android:background="#e2e2e2"
+        />
+    <View
+        android:layout_width="410dp"
+        android:layout_height="54dp"
+        android:layout_weight="3"
+        android:layout_alignParentBottom="true"
+        android:background="@color/whiteTextColor"
+        />
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        android:layout_alignParentBottom="true"
+        >
+        <TableRow
+            android:layout_width="0dp">
+            <ImageButton
+                android:id="@+id/Qrscan"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+
+                android:background="@color/whiteTextColor"
+                android:src="@drawable/ic_qr_code"
+                />
+            <ImageButton
+                android:id="@+id/Store"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+
+                android:background="@color/whiteTextColor"
+                android:src="@drawable/ic_store_color"
+                />
+            <ImageButton
+                android:id="@+id/Cart"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+
+                android:background="@color/whiteTextColor"
+                android:src="@drawable/ic_shopping_cart"
+                />
+            <ImageButton
+                android:id="@+id/Viewmore"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+
+                android:background="@color/whiteTextColor"
+                android:src="@drawable/ic_view_headline"
+                />
+        </TableRow>
+    </TableLayout>
+<!--    <ImageButton-->
+<!--        android:id="@+id/Store"-->
+<!--        android:layout_width="54dp"-->
+<!--        android:layout_height="54dp"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_marginLeft="110dp"-->
+<!--        android:background="@color/whiteTextColor"-->
+<!--        android:tint="@color/themeColor"-->
+<!--        android:layout_marginBottom="0dp"-->
+<!--        android:src="@drawable/ic_store"-->
+<!--        />-->
+<!--    <ImageButton-->
+<!--        android:id="@+id/Cart"-->
+<!--        android:layout_width="54dp"-->
+<!--        android:layout_height="54dp"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_marginLeft="210dp"-->
+<!--        android:background="@color/whiteTextColor"-->
+
+<!--        android:src="@drawable/ic_shopping_cart"-->
+<!--        />-->
+<!--    <ImageButton-->
+<!--        android:id="@+id/Qrscan"-->
+<!--        android:layout_width="54dp"-->
+<!--        android:layout_height="54dp"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_alignParentLeft="true"-->
+<!--        android:layout_marginLeft="20dp"-->
+
+<!--        android:background="@color/whiteTextColor"-->
+<!--        android:src="@drawable/ic_qr_code"-->
+<!--        />-->
+<!--    <ImageButton-->
+<!--        android:id="@+id/Viewmore"-->
+<!--        android:layout_width="54dp"-->
+<!--        android:layout_height="54dp"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_marginRight="20dp"-->
+<!--        android:layout_alignParentRight="true"-->
+
+<!--        android:background="@color/whiteTextColor"-->
+<!--        android:src="@drawable/ic_view_headline"-->
+<!--        />-->
+
+
+</RelativeLayout>

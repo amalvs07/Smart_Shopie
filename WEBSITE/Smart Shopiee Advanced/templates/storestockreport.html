@@ -1,0 +1,169 @@
+{% include 'storeheader.html' %}
+
+<div class="inner-banner">
+</div>
+<section class="w3l-breadcrumb">
+    <div class="container">
+        <ul class="breadcrumbs-custom-path">
+            <li><a href="#url">Home</a></li>
+            <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span>View OutofStock</li>
+        </ul>
+    </div>
+</section>
+ <!--/contact-->
+  <section class="w3l-contact-11 py-5">
+    <div class="contacts-main py-lg-5 py-md-4">
+      <div class="title-content text-center">
+        <h6 class="sub-titlehny">Stock</h6>
+        <h3 class="hny-title"> Stock Report<span style="color: #e4381C">&nbsp;DETAILS</span></h3>
+    </div>
+    <table class="sales">
+    <tr><th colspan="2" style="text-align: center; color:WHITE;font-size: 23px;">REPORT</th></tr>
+    <tr>
+    <td><a class="action" href="?action=singledate" style="padding-left: 30px;padding-right: 30px;"> On a day</a></td>
+    <td><a class="action" href="?action=doubledate"> Between dates</a></td>
+    </tr>
+  </table>    
+
+<center>
+    
+
+    {% if data['singledate'] %}
+  <form method="post">
+    <table >
+      <tr>
+
+        <td style="padding-left: 300px;">
+          <input type="date" class="form-control" name="singledatesubmit">
+        </td>
+
+          <td  colspan="2" align="center">
+            <button type="submit" name="singlesubmit"  class="btn btn-primary btn-sm" style="    font-family: fangsong;
+    font-weight: 700;
+    padding: 10px 50px 10px 50px;
+    letter-spacing: 5px;">SORT</button>
+          </td>
+        </tr>
+    </table>
+  </form>
+  {% endif %} 
+
+    {% if data['doubledate'] %}
+  <form method="post">
+    <table >
+      <tr>
+        <td style="padding-left: 170px;">
+          <input type="date" class="form-control" name="fromddate"></td>
+       
+        <td style="padding-left: 170px;"><input type="date" class="form-control" name="toddate"></td>
+     
+       <td  colspan="2" align="center"><button type="submit" name="doublesubmit"  class="btn btn-primary btn-sm" style="    font-family: fangsong;
+    font-weight: 700;
+    padding: 10px 50px 10px 50px;
+    letter-spacing: 5px;">SORT</button>
+        </td>
+        </tr>
+    </table>
+  </form>
+  {% endif %} 
+    </center>
+
+
+
+
+
+<table class="sales">
+  <thead >
+     <tr>
+    <th scope="col">Sl.No</th>
+    <th scope="col">Image</th>
+    <th scope="col">Product Name</th>  
+    <th scope="col">Store Name</th>
+  <th scope="col">Description</th>
+    <th scope="col">Amount</th> 
+    <th scope="col">Purchased</th> 
+    <th scope="col">SalesDate</th>
+<!--     <th scope="col">Sales date</th>   -->
+  
+  </tr>
+</thead>
+<tbody>
+
+
+{% if data['salesinglestockdate'] %}
+    {% for row in data['salesinglestockdate'] %}
+  <tr>
+    <td scope="row" data-label="Sl.No">{{loop.index}}</td>
+    <td scope="row" data-label="Image"><img src="../{{row['image']}}" alt="soorryy" style="width: 150px;  height: 120px;"></td>
+    <td scope="row" data-label="Product Name">{{row['product_name']}}</td>
+ 
+    <td scope="row" data-label="Store Namer">{{row['store_name']}}</td>
+    <td scope="row" data-label="Description">{{row['description']}}</td>
+    <td scope="row" data-label="Amount">{{row['amount']}}</td>
+    <td scope="row" data-label="Purchased">{{row['SUM_Quantity']}}</td>
+    <td scope="row" data-label="SalesDate">{{row['sales_date']}}</td>
+<!--      <td scope="row" data-label="Sales Date">{{row['sales_date']}}</td> -->
+
+  
+  </tr>
+  {% endfor %}
+  {% elif data['salesdoublestockdate'] %}
+  {% for row in data['salesdoublestockdate'] %}
+  <tr>
+    <td scope="row" data-label="Sl.No">{{loop.index}}</td>
+    <td scope="row" data-label="Image"><img src="../{{row['image']}}" alt="soorryy" style="width: 150px;  height: 120px;"></td>
+    <td scope="row" data-label="Product Name">{{row['product_name']}}</td>
+ 
+    <td scope="row" data-label="Store Namer">{{row['store_name']}}</td>
+    <td scope="row" data-label="Description">{{row['description']}}</td>
+    <td scope="row" data-label="Amount">{{row['amount']}}</td>
+    <td scope="row" data-label="Purchased">{{row['SUM_Quantity']}}</td>
+    <td scope="row" data-label="SalesDate">{{row['sales_date']}}</td>
+<!--      <td scope="row" data-label="Sales Date">{{row['sales_date']}}</td>
+ -->  
+  </tr>
+  {% endfor %}
+  {% else %}
+
+    {% for row in data['outofstock'] %}
+  <tr>
+    <td scope="row" data-label="Sl.No">{{loop.index}}</td>
+    <td scope="row" data-label="Image"><img src="../{{row['image']}}" alt="soorryy" style="width: 150px;  height: 120px;"></td>
+    <td scope="row" data-label="Product Name">{{row['product_name']}}</td>
+ 
+    <td scope="row" data-label="Store Namer">{{row['store_name']}}</td>
+    <td scope="row" data-label="Description">{{row['description']}}</td>
+    <td scope="row" data-label="Amount">{{row['amount']}}</td>
+    <td scope="row" data-label="Purchased">{{row['SUM_Quantity']}}</td>
+    <td scope="row" data-label="SalesDate">{{row['sales_date']}}</td>
+<!--      <td scope="row" data-label="Sales Date">{{row['sales_date']}}</td>
+ -->  
+  </tr>
+  {% endfor %}
+    {% endif %}
+</tbody>
+
+</table>
+
+</center>
+</div>
+</section>
+
+
+{% include 'footer.html' %}
+<style type="text/css">
+  #deletestore,
+  #updatestore{
+    padding: 10px;
+    color: black;
+    border-radius: 5px
+  }
+  #deletestore
+  {
+    background-color: crimson;
+  }
+  #updatestore{
+        background-color: mediumseagreen;
+  }
+
+</style>

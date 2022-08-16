@@ -1,0 +1,239 @@
+{% include 'storeheader.html' %}
+<script type="text/javascript" src="/static/js/qrcode/qrcode.js"></script>
+
+<div class="inner-banner">
+</div>
+<section class="w3l-breadcrumb">
+    <div class="container">
+        <ul class="breadcrumbs-custom-path">
+            <li><a href="#url">Home</a></li>
+            <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span> Manage Product</li>
+        </ul>
+    </div>
+</section>
+  <!--/contact-->
+  <section class="w3l-contact-11 py-5">
+    <div class="contacts-main py-lg-5 py-md-4">
+      <div class="title-content text-center">
+        <h6 class="sub-titlehny">Stores</h6>
+        {% if data['upproducts'] %}
+        <h3 class="hny-title">Updation of Product</h3>
+        {% else %}
+        <h3 class="hny-title">Insertion of Product</h3>
+         {% endif %}
+    </div>
+      <div class="form-41-mian section-gap mt-5">
+        <div class="container">
+          <div class="d-grid align-form-map">
+            <div class="form-inner-cont">
+              <form  method="post" class="signin-form" style="    padding-bottom: 30px !important;" enctype="multipart/form-data">
+              		{% if data['upproducts'] %}
+                <div class="form-input">
+                  <label for="w3lName">Product Name*</label>
+                  <input type="text"  id="w3lName" name="product_name" placeholder="Enter Your Product name" 
+                  value="{{data['upproducts'][0]['product_name'] }}" />
+                </div>              
+                 <div class="form-input">
+                  <label for="w3lName" >Image*</label>
+                  <input type="file"  id="w3lName" name="image" 
+                  value="{{data['upproducts'][0]['image'] }}" />
+                </div>
+
+               
+                <div class="form-input">
+                  <label for="w3lSender">Description *</label>
+                  <input type="text"  id="w3lSender"  name="description" placeholder="Enter the Description" 
+                  value="{{ data['upproducts'][0]['description'] }}" required="" />
+                </div>
+        
+
+              
+
+                 <div class="form-input">
+                  <label for="w3lSender">Amount *</label>
+                  <input type="text" name="amount"  placeholder="Enter the Amount" value="{{ data['upproducts'][0]['amount'] }}"  required="" />
+                </div>
+                <div class="form-input">
+                  <label for="w3lSender">Stock *</label>
+                  <input type="text" name="stock"  placeholder="Enter the Stock" value="{{ data['upproducts'][0]['avaliable_quantity'] }}"   required="" />
+                </div>
+<!--                 <div class="form-input">
+                  <label for="w3lSender">Unit *</label>
+                  <input type="text" name="unit"  placeholder="Enter the Unit" value="{{ data['upproducts'][0]['unit'] }}"   required="" />
+                </div> -->
+
+                 <div class="form-submit text-right">
+                    <button type="submit"  name="submits"    class="btn btn-style btn-primary">Update Details</button>
+                  </div>
+{% else %}
+
+          <div class="form-input">
+                  <label for="w3lName">Product Name*</label>
+                  <input type="text"  id="w3lName" name="product_name" placeholder="Enter Your Product name" 
+                   />
+                </div>
+                 <div class="form-input">
+                  <label for="w3lName">Image*</label>
+                  <input type="file"  id="w3lName" name="image" 
+                  />
+                </div>
+
+               
+                <div class="form-input">
+                  <label for="w3lSender">Description *</label>
+                  <input type="text"  id="w3lSender"  name="description" placeholder="Enter the Description" 
+                  required="" />
+                </div>
+        
+
+              
+
+                 <div class="form-input">
+                  <label for="w3lSender">Amount *</label>
+                  <input type="text" name="amount"  placeholder="Enter the Amount"   required="" />
+                </div>
+                <div class="form-input">
+                  <label for="w3lSender">Stock *</label>
+                  <input type="text" name="stock"  placeholder="Enter the Stock"   required="" />
+                </div>
+                <div class="form-input">
+                  <label for="w3lSender">Unit *</label>
+                  <input type="text" name="unit"  placeholder="Enter the Unit"   required="" />
+                </div>
+                 <div class="form-submit text-right">
+                    <button type="submit" name="submit" class="btn btn-style btn-primary">Submit</button>
+                  </div>
+
+
+
+             
+
+
+
+
+         
+                  {% endif %}
+              </form>
+            </div>
+            <div class="map" style="padding-bottom: 40px !important;">
+
+             <!--  <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001161.424489281!2d-78.01909140705047!3d42.72866436845163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sin!4v1570786994395!5m2!1sen!2sin"
+                frameborder="0" allowfullscreen=""></iframe> -->
+<!--                 {% if data['qrvalue'] %}
+
+                <h1>Generate Q R Code for Product :- {{data['qrvalue'][0]['product_name']}}</h1>
+              
+            
+             
+  <form onsubmit="generate();return false;">
+  <input type="hidden" id="qr"  value="{{ data['qrvalue'][0]['product_id']}}" >
+  <input type="submit" value="Generate">
+</form>
+{%else %} -->
+               <img src="../static/images/37.jpg" style="width: 550px;
+    height: 600px;" alt="ooppssssssss">
+<!-- {% endif %}
+                <div id="qrResult" style="height: 200px;width: 200px"> -->
+  
+     <!--    </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+	<center>
+		          
+
+
+
+<table class="rating">
+  <thead >
+  	 <tr>
+		<th scope="col">Sl.No</th>
+		<th scope="col">Image</th>
+		<th scope="col">Product Name</th>
+    
+    <th scope="col">Store Name</th>
+		<th scope="col">Description</th>
+    <th scope="col">Amount</th> 
+    <th scope="col">Stock</th> 
+    <th scope="col">Unit</th> 
+		<th scope="col" colspan="2" style="text-align: center;">Action</th>
+<!--     <th scope="col">Generate QRcode</th> -->
+	</tr>
+</thead>
+
+<tbody>
+    {% for row in data['products'] %}
+  <tr>
+    <td scope="row" data-label="Sl.No">{{loop.index}}</td>
+    <td scope="row" data-label="Image"><img src="../{{row['image']}}" alt="soorryy" style="width: 150px;  height: 120px;"></td>
+    <td scope="row" data-label="Product Name">{{row['product_name']}}</td>
+ 
+    <td scope="row" data-label="Store Namer">{{row['store_name']}}</td>
+    <td scope="row" data-label="Description">{{row['description']}}</td>
+    <td scope="row" data-label="Amount">{{row['amount']}}</td>
+    {% if row['avaliable_quantity'] == '0' %}
+    <td scope="row" data-label="Stock">Out of Stock</td>
+    {% else %}
+      <td scope="row" data-label="Stock"> {{row['avaliable_quantity'] }}</td>
+      {% endif%}
+    <td scope="row" data-label="Unit">{{row['unit']}}</td>
+    <td scope="row" data-label="Action"><a href="?action=update&id={{row['product_id']}}" id="updatestore">Update</a></td>
+    <td scope="row" data-label="Action"><a href="?action=delete&id={{row['product_id']}}" id="deletestore">Delete</a></td>
+      
+<!--     <td scope="row" data-label="Generate"><a href="?action=qrcode&id={{row['product_id']}}" id="qrcode">QRCode</a></td> -->
+  
+  </tr>
+  {% endfor %}
+</tbody>
+
+</table>
+
+</center>
+</div>
+</section>
+
+{% include 'footer.html' %}
+<style type="text/css">
+	#deletestore,
+	#updatestore,
+   #qrcode{
+		padding: 10px;
+		color: black;
+		border-radius: 5px
+	}
+	#deletestore
+	{
+		background-color: crimson;
+	}
+	#updatestore{
+		    background-color: mediumseagreen;
+	}
+  #qrcode{
+    background-color: cyan;
+  }
+
+</style>
+<script type="text/javascript">
+  var qrcode=new QRCode(document.getElementById('qrResult'),{
+    width:200,
+    height:200
+  });
+
+function generate(){
+  var message=document.getElementById('qr');
+  // if(!message.value){
+  //   alert("Input a text");
+  //   message.focus();
+  //   return;
+  // }
+
+  qrcode.makeCode(message.value);
+}
+
+</script>

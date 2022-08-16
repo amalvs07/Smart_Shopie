@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".Payment"
+    android:layout_gravity="center"
+    android:background="@color/login_bk_color"
+    android:focusableInTouchMode="true"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+
+
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="-6dp"
+        android:layout_marginBottom="6dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+<!--            <TableRow-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="match_parent">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="376dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:gravity="center"-->
+<!--                    android:layout_marginBottom="20dp"-->
+<!--                    android:text="Transaction"-->
+<!--                    android:textSize="20dp"-->
+<!--                    android:textStyle="bold" />-->
+<!--            </TableRow>-->
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@drawable/payment" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="₹"
+                    android:textColor="#3f9703"
+                    android:textSize="20sp" />
+            <TextView
+                android:id="@+id/tvamount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="16dp"
+                android:text="800"
+                android:textColor="#3f9703"
+                android:textSize="20sp"
+                />
+            </TableRow>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputName"
+                        style="@style/parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="@dimen/loginViewsMargin"
+                        app:helperText="Requied *"
+                        app:helperTextTextColor="@color/red"
+                        >
+                        <EditText
+                            android:id="@+id/eTcardName"
+                            style="@style/modifiedEditText"
+                            android:hint="Name On Card"
+                            android:inputType="textPersonName"
+                            android:maxLines="1"
+                            android:ems="10"
+                            android:textSize="15dp"
+                            android:maxLength="20"
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputCard"
+                    style="@style/parent"
+                    android:layout_marginTop="@dimen/loginViewsMargin"
+                    android:layout_marginLeft="10dp"
+                    app:helperText="Requied *"
+                    app:helperTextTextColor="@color/red"
+                    >
+                    <EditText
+                        android:id="@+id/eTcardNumber"
+                        style="@style/modifiedEditText"
+                        android:hint="Card Number"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:ems="10"
+                        android:textSize="15dp"
+                        android:maxLength="16"
+                        >
+<!--                        <requestFocus />-->
+                    </EditText>
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputCVV"
+                    style="@style/parent"
+                    android:layout_marginTop="@dimen/loginViewsMargin"
+                    android:layout_marginLeft="10dp"
+                    app:helperText="Requied *"
+                    app:helperTextTextColor="@color/red"
+                    >
+                    <EditText
+                        android:id="@+id/eTCvv"
+                        style="@style/modifiedEditText"
+                        android:hint="CVV"
+                        android:inputType="numberPassword"
+                        android:maxLines="1"
+                        android:ems="10"
+                        android:textSize="15dp"
+                        android:maxLength="3"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputDate"
+                    style="@style/parent"
+                    android:layout_marginTop="@dimen/loginViewsMargin"
+                    android:layout_marginLeft="10dp"
+                    app:helperText="Requied *"
+                    app:helperTextTextColor="@color/red"
+                    >
+                    <EditText
+                        android:id="@+id/eTdate"
+                        style="@style/modifiedEditText"
+                        android:hint="Expiry Date"
+                        android:inputType="date"
+                        android:maxLines="1"
+                        android:textSize="15dp"
+                        android:ems="10"
+                        />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/ondatepicker"
+        android:background="@color/whiteTextColor"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:src="@drawable/ic_date" />
+</RelativeLayout>
+            <br.com.simplepass.loading_button_lib.customViews.CircularProgressButton
+                android:id="@+id/button1"
+                style="@style/loginButton"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:text="Confirm"
+                app:initialCornerAngle="27dp"
+                app:spinning_bar_color="#FFF"
+                app:spinning_bar_padding="6dp"
+                app:spinning_bar_width="4dp"
+                android:layout_marginBottom="30dp"
+                />
+        </LinearLayout>
+    </ScrollView>
+    <View
+        android:layout_width="410dp"
+        android:layout_height="1dp"
+        android:layout_weight="3"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="65dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="0dp"
+        android:background="#e2e2e2"
+        />
+    <View
+        android:layout_width="410dp"
+        android:layout_height="64dp"
+        android:layout_weight="3"
+        android:layout_alignParentTop="true"
+        android:background="@color/whiteTextColor"
+        />
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Payments "
+        android:gravity="left"
+        android:layout_marginLeft="60dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginTop="25dp"
+
+        android:textAppearance="?android:attr/textAppearanceMedium"
+
+        />
+
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_back_arrow"
+        />
+</RelativeLayout>

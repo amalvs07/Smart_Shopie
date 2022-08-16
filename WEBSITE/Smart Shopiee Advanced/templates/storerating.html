@@ -1,0 +1,67 @@
+{% include 'storeheader.html' %}
+
+<div class="inner-banner">
+</div>
+<section class="w3l-breadcrumb">
+    <div class="container">
+        <ul class="breadcrumbs-custom-path">
+            <li><a href="#url">Home</a></li>
+            <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span>View Rating</li>
+        </ul>
+    </div>
+</section>
+ <!--/contact-->
+  <section class="w3l-contact-11 py-5">
+    <div class="contacts-main py-lg-5 py-md-4">
+      <div class="title-content text-center">
+        <h6 class="sub-titlehny">Rate</h6>
+        <h3 class="hny-title">Store Rating</h3>
+    </div>
+		          
+<table class="sales">
+  <thead >
+  	 <tr>
+		<th scope="col">Sl.No</th> 
+    <th scope="col">Customer  Name</th>
+    <th scope="col">Rated point</th> 
+	</tr>
+</thead>
+<tbody>
+    {% for row in data['rating'] %}
+  <tr>
+    <td scope="row" data-label="Sl.No">{{loop.index}}</td>
+    <td scope="row" data-label="Customer Namer">{{row['first_name']}} {{row['last_name']}}</td>
+
+    <td scope="row" data-label="Rating">{{row['rated_point']}}</td>
+
+
+
+  
+  </tr>
+  {% endfor %}
+</tbody>
+
+</table>
+
+</center>
+</div>
+</section>
+
+
+{% include 'footer.html' %}
+<style type="text/css">
+	#deletestore,
+	#updatestore{
+		padding: 10px;
+		color: black;
+		border-radius: 5px
+	}
+	#deletestore
+	{
+		background-color: crimson;
+	}
+	#updatestore{
+		    background-color: mediumseagreen;
+	}
+
+</style>

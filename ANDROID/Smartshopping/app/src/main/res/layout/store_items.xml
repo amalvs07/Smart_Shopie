@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="15dp"
+    app:cardUseCompatPadding="true"
+    android:layout_marginBottom="20dp"
+
+    android:id="@+id/carview"
+
+>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
+            android:background="@drawable/bgcolor2"
+            >
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="90dp"
+                android:id="@+id/shopdemoimages"
+                android:layout_marginTop="5dp"
+                app:srcCompat="@drawable/shop2"
+                android:layout_marginLeft="15dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:id="@+id/store_name"
+                android:text="name"
+                android:textSize="@dimen/loginViewsMargin"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_alignTop="@id/shopdemoimages"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_toRightOf="@id/shopdemoimages"
+                android:layout_toEndOf="@id/shopdemoimages"
+                />
+
+
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@id/store_name"
+                    android:layout_marginTop="13dp"
+                    android:layout_toEndOf="@id/shopdemoimages"
+                    android:layout_toRightOf="@id/shopdemoimages"
+                    android:src="@drawable/ic_email"
+                    android:layout_marginLeft="30dp"
+                    />
+
+                <TextView
+                    android:id="@+id/store_mail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/store_name"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="13dp"
+                    android:textSize="14dp"
+                    android:layout_toEndOf="@id/shopdemoimages"
+                    android:layout_toRightOf="@id/shopdemoimages"
+                    android:text="Email"
+                    android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_below="@id/store_mail"
+                android:layout_marginTop="13dp"
+                android:layout_toEndOf="@id/shopdemoimages"
+                android:layout_toRightOf="@id/shopdemoimages"
+                android:src="@drawable/ic_phone"
+                android:layout_marginLeft="30dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Phone No."
+                android:id="@+id/store_phone"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="13dp"
+                android:textSize="14dp"
+                android:layout_below="@id/store_mail"
+                android:layout_marginBottom="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_toRightOf="@id/shopdemoimages"
+                android:layout_toEndOf="@id/shopdemoimages"
+                />
+</RelativeLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,178 @@
+{% include 'adminheader.html' %}
+
+<div class="inner-banner">
+</div>
+<section class="w3l-breadcrumb">
+    <div class="container">
+        <ul class="breadcrumbs-custom-path">
+            <li><a href="#url">Home</a></li>
+            <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span> Manage Stores</li>
+        </ul>
+    </div>
+</section>
+  <!--/contact-->
+  <section class="w3l-contact-11 py-5">
+    <div class="contacts-main py-lg-5 py-md-4">
+      <div class="title-content text-center">
+        <h6 class="sub-titlehny">Stores</h6>
+        {% if data['upstore'] %}
+        <h3 class="hny-title">Updation of Stores</h3>
+        {% else %}
+        <h3 class="hny-title">Registration of Stores</h3>
+         {% endif %}
+    </div>
+      <div class="form-41-mian section-gap mt-5">
+        <div class="container">
+          <div class="d-grid align-form-map">
+            <div class="form-inner-cont">
+              <form  method="post" class="signin-form" style="    padding-bottom: 30px !important;">
+              		{% if data['upstore'] %}
+                <div class="form-input">
+                  <label for="w3lName">Store Name*</label>
+                  <input type="text"  id="w3lName" name="store_name" placeholder="Enter Your Store name" 
+                  value="{{data['upstore'][0]['store_name'] }}" />
+                </div>
+
+
+                <div class="form-input">
+                  <label for="w3lSender">Phone No*</label>
+                  <input type="text"  id="w3lSender"  name="phone" placeholder="Enter the Phone  number" 
+                  value="{{ data['upstore'][0]['phone'] }}" required="" />
+                </div>
+               <!--  <a onmouseover="myFunction();">View Map</a> -->
+
+                 <div class="form-input">
+                  <label for="w3lSender">Longitude *</label>
+                  <input type="text"  name="logitude" id="elongi" placeholder="Enter the longitude" value="{{ data['upstore'][0]['longitude'] }}" required="" />
+                </div>
+
+                 <div class="form-input">
+                  <label for="w3lSender">Latitude *</label>
+                  <input type="text" type="text" name="latitude" id="slati" placeholder="Enter the latitude" value="{{ data['upstore'][0]['latitude'] }}"  required="" />
+                </div>
+
+                 <div class="form-submit text-right">
+                    <button type="submit"  name="submits"    class="btn btn-style btn-primary">Update Details</button>
+                  </div>
+{% else %}
+
+  <div class="form-input">
+                  <label for="w3lName">Store Name*</label>
+                  <input type="text"  id="w3lName" name="store_name" placeholder="Enter Your Store name"  />
+                </div>
+
+
+                <div class="form-input">
+                  <label for="w3lSender">Phone No*</label>
+                  <input type="text"  id="w3lSender"  name="phone" placeholder="Enter the Phone  number" required="" />
+                </div>
+             <!--    <a onmouseover="myFunction();">View Map</a> -->
+
+                 <div class="form-input">
+                  <label for="w3lSender">Longitude *</label>
+                  <input type="text"  name="logitude" id="elongi" placeholder="Enter the longitude" required="" />
+                </div>
+
+                 <div class="form-input">
+                  <label for="w3lSender">Latitude *</label>
+                  <input type="text" name="latitude" id="slati" placeholder="Enter the latitude" required="" />
+                </div>
+
+                  <div class="form-input">
+                  <label for="w3lSender">E-mail *</label>
+                  <input type="text" name="email" placeholder="Enter the Email Address" required="" />
+                </div>
+
+                  <div class="form-input">
+                  <label for="w3lSender">Password *</label>
+                  <input type="password" name="password" placeholder="Enter the password" required="" />
+                </div>
+
+
+
+                 <div class="form-submit text-right">
+                    <button type="submit" name="submit" class="btn btn-style btn-primary">Submit</button>
+                  </div>
+
+
+
+             
+
+
+
+
+         
+                  {% endif %}
+              </form>
+            </div>
+            <div class="map" style="padding-bottom: 40px !important;">
+            	  <div id="dvMap" style="width: 600px; height: 400px"></div>
+             <!--  <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001161.424489281!2d-78.01909140705047!3d42.72866436845163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sin!4v1570786994395!5m2!1sen!2sin"
+                frameborder="0" allowfullscreen=""></iframe> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+	<center>
+		          
+
+
+
+<table >
+  <thead >
+  	 <tr>
+		<th scope="col">Sl.No</th>
+		
+		<th scope="col">Store Name</th>
+		<th scope="col">Phone</th>
+		<th scope="col">E-mail</th>
+		<th scope="col">Latitude</th> 
+		<th scope="col">Longitude</th>
+		<th scope="col" colspan="2" style="text-align: center;">Action</th>
+	</tr>
+</thead>
+<tbody>
+    {% for row in data['store'] %}
+  <tr>
+    <td scope="row" data-label="Sl.No">{{loop.index}}</td>
+    <td scope="row" data-label="Store Name">{{row['store_name']}}</td>
+    <td  scope="row" data-label="Phone No.">{{row['phone']}}</td>
+    <td scope="row" data-label="E-mail">{{row['email']}}</td>
+    <td scope="row" data-label="Latitude">{{row['latitude']}}</td>
+    <td scope="row" data-label="Longitude">{{row['longitude']}}</td>
+      <td scope="row" data-label="Action"><a href="?action=update&id={{row['login_id']}}" id="updatestore">Update</a></td>
+    <td scope="row" data-label="Action"><a href="?action=delete&id={{row['login_id']}}" id="deletestore">Delete</a></td>
+  
+  </tr>
+  {% endfor %}
+</tbody>
+
+</table>
+
+</center>
+</div>
+</section>
+
+
+{% include 'footer.html' %}
+<style type="text/css">
+	#deletestore,
+	#updatestore{
+		padding: 10px;
+		color: black;
+		border-radius: 5px
+	}
+	#deletestore
+	{
+		background-color: crimson;
+	}
+	#updatestore{
+		    background-color: mediumseagreen;
+	}
+
+</style>
